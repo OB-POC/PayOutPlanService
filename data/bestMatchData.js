@@ -4,84 +4,116 @@ module.exports = {
             username: 'alice',
             password: 'wonderland',
             UIN: 'UIN-xxxx',
-            totalAvailableDebitBalance: 1200,
-            totalAvailableCreditBalance: 0,
+            totalAvailableBalance: 600,
             creditDebitMatch: [
                 {
-                    accountType: 'CC',
-                    accountNumber: '456789 0123456789',
-                    accountTitle: 'Low Rate',
-                    totalBalanceDue: 2000,
-                    clearedTotalDue: true,
-                    apr: 35,
-                    dueDate: new Date().setDate(new Date().getDate()+5),
-                    senders: [
-                        {
-                            "accountType": "PCA",
-                            "accountNumber": "123456 78901234",
-                            "accountTitle": "Classic Account",
-                            "contributingAmount": 1900,
-                            "totalAvailableBalance": 1900,
-                            "beforeContributingBalance": 1900,
-                            "afterContributingBalance": 0
-                        },
-                        {
-                            "accountType": "PCA",
-                            "accountNumber": "234567 89012345",
-                            "accountTitle": "Platinum Account",
-                            "contributingAmount": 100,
-                            "totalAvailableBalance": 1400,
-                            "beforeContributingBalance": 1400,
-                            "afterContributingBalance": 1300
-                        }
-                    ]
-                },
-                {
+                    bankName: 'Monzo',
                     accountType: 'M',
-                    accountNumber: '567890 1234567890',
                     accountTitle: 'Home Loan',
-                    totalBalanceDue: 2000,
+                    totalBalanceDue: 6000,
                     clearedTotalDue: true,
-                    apr: 30,
-                    dueDate: new Date().setDate(new Date().getDate()+20) , 
+                    interestRate: 2.9,
                     senders: [
                         {
-                            "accountType": "PCA",
-                            "accountNumber": "234567 89012345",
-                            "accountTitle": "Platinum Account",
-                            "contributingAmount": 1300,
-                            "totalAvailableBalance": 1400,
-                            "beforeContributingBalance": 1300,
+                            "bankName": "Halifax",
+                            "accountType": "SB",
+                            "accountTitle": "Every Day Saver",
+                            "contributingAmount": 1000,
+                            "totalAvailableBalance": 1000,
+                            "beforeContributingBalance": 1000,
                             "afterContributingBalance": 0
                         },
                         {
-                            "accountType": "Savings",
-                            "accountNumber": "345678 90123456",
+                            "bankName": "Barclays",
+                            "accountType": "SB",
                             "accountTitle": "Easy Saver",
-                            "contributingAmount": 700,
-                            "totalAvailableBalance": 4400,
-                            "beforeContributingBalance": 4400,
-                            "afterContributingBalance": 3700
+                            "contributingAmount": 5000,
+                            "totalAvailableBalance": 5000,
+                            "beforeContributingBalance": 5000,
+                            "afterContributingBalance": 0
+                        },
+                        {
+                            "bankName": "HSBC",
+                            "accountType": "PCA",
+                            "accountTitle": "HSBC Advance bank Account",
+                            "contributingAmount": 0,
+                            "totalAvailableBalance": 2600,
+                            "beforeContributingBalance": 2600,
+                            "afterContributingBalance": 2600
                         }
                     ]
                 },
                 {
+                    bankName: 'JPMC',
                     accountType: 'CC',
-                    accountNumber: '567890 1234567890',
-                    accountTitle: 'No Fee 0% Balance Transfer',
-                    totalBalanceDue: 2500,
+                    accountTitle: 'Freedom Unlimited',
+                    totalBalanceDue: 1800,
                     clearedTotalDue: true,
-                    apr: 25,
-                    dueDate: new Date().setDate(new Date().getDate()+12),
+                    apr: 25.49,
                     senders: [
                         {
-                            "accountType": "Savings",
-                            "accountNumber": "345678 90123456",
+                            "bankName": "HSBC",
+                            "accountType": "PCA",
+                            "accountTitle": "HSBC Advance bank Account",
+                            "contributingAmount": 1800,
+                            "totalAvailableBalance": 2600,
+                            "beforeContributingBalance": 2600,
+                            "afterContributingBalance": 800
+                        },
+                        {
+                            "bankName": "Halifax",
+                            "accountType": "SB",
+                            "accountTitle": "Every Day Saver",
+                            "contributingAmount": 0,
+                            "totalAvailableBalance": 1000,
+                            "beforeContributingBalance": 1000,
+                            "afterContributingBalance": 1000
+                        },
+                        {
+                            "bankName": "Barclays",
+                            "accountType": "SB",
                             "accountTitle": "Easy Saver",
-                            "contributingAmount": 2500,
-                            "totalAvailableBalance": 4400,
-                            "beforeContributingBalance": 3700,
-                            "afterContributingBalance": 1200   
+                            "contributingAmount": 0,
+                            "totalAvailableBalance": 5000,
+                            "beforeContributingBalance": 5000,
+                            "afterContributingBalance": 5000
+                        }
+                    ]
+                },
+                {
+                    bankName: 'RBS',
+                    accountType: 'CC',
+                    accountTitle: 'Unlimited Credit Card',
+                    totalBalanceDue: 200,
+                    clearedTotalDue: true,
+                    apr: 19.94,
+                    senders: [
+                        {   
+                            "bankName": "HSBC",
+                            "accountType": "PCA",
+                            "accountTitle": "HSBC Advance bank Account",
+                            "contributingAmount": 200,
+                            "totalAvailableBalance": 2600,
+                            "beforeContributingBalance": 800,
+                            "afterContributingBalance": 600  
+                        },
+                        {
+                            "bankName": "Halifax",
+                            "accountType": "SB",
+                            "accountTitle": "Every Day Saver",
+                            "contributingAmount": 0,
+                            "totalAvailableBalance": 1000,
+                            "beforeContributingBalance": 1000,
+                            "afterContributingBalance": 1000
+                        },
+                        {
+                            "bankName": "Barclays",
+                            "accountType": "SB",
+                            "accountTitle": "Easy Saver",
+                            "contributingAmount": 0,
+                            "totalAvailableBalance": 5000,
+                            "beforeContributingBalance": 5000,
+                            "afterContributingBalance": 5000
                         }
                     ] 
                 }
@@ -91,84 +123,116 @@ module.exports = {
             username: 'john',
             password: 'doe',
             UIN: 'UIN-xxxxx',
-            totalAvailableCreditBalance: 200,
-            totalAvailableDebitBalance: 0,
+            totalAvailableBalance: -1100,
             creditDebitMatch: [
                 {
-                    accountType: 'CC',
-                    accountNumber: '456789 0123456789',
-                    accountTitle: 'Low Rate',
-                    totalBalanceDue: 2000,
+                    bankName: 'Monzo',
+                    accountType: 'M',
+                    accountTitle: 'Home Loan',
+                    totalBalanceDue: 6000,
                     clearedTotalDue: true,
-                    apr: 35,
-                    dueDate: new Date().setDate(new Date().getDate()+12),
+                    interestRate: 2.9,
                     senders: [
                         {
-                            "accountType": "PCA",
-                            "accountNumber": "678901 23456789",
-                            "accountTitle": "Classic Account",
-                            "contributingAmount": 1900,
-                            "totalAvailableBalance": 1900,
-                            "beforeContributingBalance": 1900,
+                            "bankName": "Halifax",
+                            "accountType": "SB",
+                            "accountTitle": "Every Day Saver",
+                            "contributingAmount": 2500,
+                            "totalAvailableBalance": 2500,
+                            "beforeContributingBalance": 2500,
                             "afterContributingBalance": 0 
                         },
                         {
+                            "bankName": "Barclays",
+                            "aaccountType": "SB",
+                            "accountTitle": "Easy Saver",
+                            "contributingAmount": 3500,
+                            "totalAvailableBalance": 3500,
+                            "beforeContributingBalance": 3500,
+                            "afterContributingBalance": 0
+                        },
+                        {
+                            "bankName": "HSBC",
                             "aaccountType": "PCA",
-                            "accountNumber": "234567 89012345",
-                            "accountTitle": "Platinum Account",
-                            "contributingAmount": 100,
-                            "totalAvailableBalance": 1400,
-                            "beforeContributingBalance": 1400,
-                            "afterContributingBalance": 1300
+                            "accountTitle": "HSBC Advance Bank Account",
+                            "contributingAmount": 0,
+                            "totalAvailableBalance": 2100,
+                            "beforeContributingBalance": 2100,
+                            "afterContributingBalance": 2100
                         }
                     ] 
                 },
                 {
+                    bankName: 'BOS',
                     accountType: 'CC',
-                    accountNumber: '567890 1234567890',
-                    accountTitle: 'No Fee 0% Balance Transfer',
-                    totalBalanceDue: 2500,
+                    accountTitle: 'Classic Credit Card',
+                    totalBalanceDue: 400,
                     clearedTotalDue: true,
-                    apr: 30,
-                    dueDate: new Date().setDate(new Date().getDate()+5),
+                    apr: 27.90,
                     senders: [
                         {
+                            "bankName": "HSBC",
                             "aaccountType": "PCA",
-                            "accountNumber": "234567 89012345",
-                            "accountTitle": "Platinum Account",
-                            "contributingAmount": 1300,
-                            "totalAvailableBalance": 1400,
-                            "beforeContributingBalance": 1300,
-                            "afterContributingBalance": 0
+                            "accountTitle": "HSBC Advance Bank Account",
+                            "contributingAmount": 400,
+                            "totalAvailableBalance": 2100,
+                            "beforeContributingBalance": 2100,
+                            "afterContributingBalance": 1700
                         },
                         {
-                            "accountType": "Savings",
-                            "accountNumber": "345678 90123456",
+                            "bankName": "Halifax",
+                            "accountType": "SB",
+                            "accountTitle": "Every Day Saver",
+                            "contributingAmount": 0,
+                            "totalAvailableBalance": 2500,
+                            "beforeContributingBalance": 2500,
+                            "afterContributingBalance": 2500 
+                        },
+                        {
+                            "bankName": "Barclays",
+                            "aaccountType": "SB",
                             "accountTitle": "Easy Saver",
-                            "contributingAmount": 1200,
-                            "totalAvailableBalance": 3000,
-                            "beforeContributingBalance": 3000,
-                            "afterContributingBalance": 1800 
+                            "contributingAmount": 0,
+                            "totalAvailableBalance": 3500,
+                            "beforeContributingBalance": 3500,
+                            "afterContributingBalance": 2500
                         }
                     ]
                 },
                 {
-                    accountType: 'M',
-                    accountNumber: '567890 1234567890',
-                    accountTitle: 'Home Loan',
-                    totalBalanceDue: 2000,
+                    bankName: 'JPMC',
+                    accountType: 'CC',
+                    accountTitle: 'Freedom Unlimited',
+                    totalBalanceDue: 2800,
                     clearedTotalDue: false,
-                    apr: 25,
-                    dueDate: new Date().setDate(new Date().getDate()+20),
+                    apr: 25.49,
                     senders: [
                         {
-                            "accountType": "Savings",
-                            "accountNumber": "345678 90123456",
+                            "bankName": "HSBC",
+                            "aaccountType": "PCA",
+                            "accountTitle": "HSBC Advance Bank Account",
+                            "contributingAmount": 1700,
+                            "totalAvailableBalance": 2100,
+                            "beforeContributingBalance": 1700,
+                            "afterContributingBalance": 0   
+                        },
+                        {
+                            "bankName": "Halifax",
+                            "accountType": "SB",
+                            "accountTitle": "Every Day Saver",
+                            "contributingAmount": 0,
+                            "totalAvailableBalance": 2500,
+                            "beforeContributingBalance": 2500,
+                            "afterContributingBalance": 2500 
+                        },
+                        {
+                            "bankName": "Barclays",
+                            "aaccountType": "SB",
                             "accountTitle": "Easy Saver",
-                            "contributingAmount": 1800,
-                            "totalAvailableBalance": 3000,
-                            "beforeContributingBalance": 1800,
-                            "afterContributingBalance": 0    
+                            "contributingAmount": 0,
+                            "totalAvailableBalance": 3500,
+                            "beforeContributingBalance": 3500,
+                            "afterContributingBalance": 3500
                         }
                     ]
                 }
