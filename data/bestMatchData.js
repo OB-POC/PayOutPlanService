@@ -31,6 +31,15 @@ module.exports = {
                             "totalAvailableBalance": 5000,
                             "beforeContributingBalance": 5000,
                             "afterContributingBalance": 0
+                        },
+                        {
+                            "bankName": "HSBC",
+                            "accountType": "PCA",
+                            "accountTitle": "HSBC Advance bank Account",
+                            "contributingAmount": 0,
+                            "totalAvailableBalance": 2600,
+                            "beforeContributingBalance": 2600,
+                            "afterContributingBalance": 2600
                         }
                     ]
                 },
@@ -50,6 +59,24 @@ module.exports = {
                             "totalAvailableBalance": 2600,
                             "beforeContributingBalance": 2600,
                             "afterContributingBalance": 800
+                        },
+                        {
+                            "bankName": "Halifax",
+                            "accountType": "SB",
+                            "accountTitle": "Every Day Saver",
+                            "contributingAmount": 0,
+                            "totalAvailableBalance": 1000,
+                            "beforeContributingBalance": 1000,
+                            "afterContributingBalance": 1000
+                        },
+                        {
+                            "bankName": "Barclays",
+                            "accountType": "SB",
+                            "accountTitle": "Easy Saver",
+                            "contributingAmount": 0,
+                            "totalAvailableBalance": 5000,
+                            "beforeContributingBalance": 5000,
+                            "afterContributingBalance": 5000
                         }
                     ]
                 },
@@ -69,6 +96,24 @@ module.exports = {
                             "totalAvailableBalance": 2600,
                             "beforeContributingBalance": 800,
                             "afterContributingBalance": 600  
+                        },
+                        {
+                            "bankName": "Halifax",
+                            "accountType": "SB",
+                            "accountTitle": "Every Day Saver",
+                            "contributingAmount": 0,
+                            "totalAvailableBalance": 1000,
+                            "beforeContributingBalance": 1000,
+                            "afterContributingBalance": 1000
+                        },
+                        {
+                            "bankName": "Barclays",
+                            "accountType": "SB",
+                            "accountTitle": "Easy Saver",
+                            "contributingAmount": 0,
+                            "totalAvailableBalance": 5000,
+                            "beforeContributingBalance": 5000,
+                            "afterContributingBalance": 5000
                         }
                     ] 
                 }
@@ -105,6 +150,15 @@ module.exports = {
                             "totalAvailableBalance": 3500,
                             "beforeContributingBalance": 3500,
                             "afterContributingBalance": 0
+                        },
+                        {
+                            "bankName": "HSBC",
+                            "aaccountType": "PCA",
+                            "accountTitle": "HSBC Advance Bank Account",
+                            "contributingAmount": 0,
+                            "totalAvailableBalance": 2100,
+                            "beforeContributingBalance": 2100,
+                            "afterContributingBalance": 2100
                         }
                     ] 
                 },
@@ -124,6 +178,24 @@ module.exports = {
                             "totalAvailableBalance": 2100,
                             "beforeContributingBalance": 2100,
                             "afterContributingBalance": 1700
+                        },
+                        {
+                            "bankName": "Halifax",
+                            "accountType": "SB",
+                            "accountTitle": "Every Day Saver",
+                            "contributingAmount": 0,
+                            "totalAvailableBalance": 2500,
+                            "beforeContributingBalance": 2500,
+                            "afterContributingBalance": 2500 
+                        },
+                        {
+                            "bankName": "Barclays",
+                            "aaccountType": "SB",
+                            "accountTitle": "Easy Saver",
+                            "contributingAmount": 0,
+                            "totalAvailableBalance": 3500,
+                            "beforeContributingBalance": 3500,
+                            "afterContributingBalance": 2500
                         }
                     ]
                 },
@@ -143,6 +215,24 @@ module.exports = {
                             "totalAvailableBalance": 2100,
                             "beforeContributingBalance": 1700,
                             "afterContributingBalance": 0   
+                        },
+                        {
+                            "bankName": "Halifax",
+                            "accountType": "SB",
+                            "accountTitle": "Every Day Saver",
+                            "contributingAmount": 0,
+                            "totalAvailableBalance": 2500,
+                            "beforeContributingBalance": 2500,
+                            "afterContributingBalance": 2500 
+                        },
+                        {
+                            "bankName": "Barclays",
+                            "aaccountType": "SB",
+                            "accountTitle": "Easy Saver",
+                            "contributingAmount": 0,
+                            "totalAvailableBalance": 3500,
+                            "beforeContributingBalance": 3500,
+                            "afterContributingBalance": 3500
                         }
                     ]
                 }
