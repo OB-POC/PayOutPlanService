@@ -38,7 +38,7 @@ module.exports = {
                             "accountTitle": "HSBC Advance bank Account",
                             "contributingAmount": 0,
                             "totalAvailableBalance": 2600,
-                            "beforeContributingBalance": 2600,
+                            "beforeContributingBalance": 0,
                             "afterContributingBalance": 2600
                         }
                     ]
@@ -66,7 +66,7 @@ module.exports = {
                             "accountTitle": "Every Day Saver",
                             "contributingAmount": 0,
                             "totalAvailableBalance": 1000,
-                            "beforeContributingBalance": 1000,
+                            "beforeContributingBalance": 0,
                             "afterContributingBalance": 1000
                         },
                         {
@@ -75,7 +75,7 @@ module.exports = {
                             "accountTitle": "Easy Saver",
                             "contributingAmount": 0,
                             "totalAvailableBalance": 5000,
-                            "beforeContributingBalance": 5000,
+                            "beforeContributingBalance": 0,
                             "afterContributingBalance": 5000
                         }
                     ]
@@ -103,7 +103,7 @@ module.exports = {
                             "accountTitle": "Every Day Saver",
                             "contributingAmount": 0,
                             "totalAvailableBalance": 1000,
-                            "beforeContributingBalance": 1000,
+                            "beforeContributingBalance": 0,
                             "afterContributingBalance": 1000
                         },
                         {
@@ -112,7 +112,7 @@ module.exports = {
                             "accountTitle": "Easy Saver",
                             "contributingAmount": 0,
                             "totalAvailableBalance": 5000,
-                            "beforeContributingBalance": 5000,
+                            "beforeContributingBalance": 0,
                             "afterContributingBalance": 5000
                         }
                     ] 
@@ -157,7 +157,7 @@ module.exports = {
                             "accountTitle": "HSBC Advance Bank Account",
                             "contributingAmount": 0,
                             "totalAvailableBalance": 2100,
-                            "beforeContributingBalance": 2100,
+                            "beforeContributingBalance": 0,
                             "afterContributingBalance": 2100
                         }
                     ] 
@@ -185,7 +185,7 @@ module.exports = {
                             "accountTitle": "Every Day Saver",
                             "contributingAmount": 0,
                             "totalAvailableBalance": 2500,
-                            "beforeContributingBalance": 2500,
+                            "beforeContributingBalance": 0,
                             "afterContributingBalance": 2500 
                         },
                         {
@@ -194,7 +194,7 @@ module.exports = {
                             "accountTitle": "Easy Saver",
                             "contributingAmount": 0,
                             "totalAvailableBalance": 3500,
-                            "beforeContributingBalance": 3500,
+                            "beforeContributingBalance": 0,
                             "afterContributingBalance": 2500
                         }
                     ]
@@ -222,7 +222,7 @@ module.exports = {
                             "accountTitle": "Every Day Saver",
                             "contributingAmount": 0,
                             "totalAvailableBalance": 2500,
-                            "beforeContributingBalance": 2500,
+                            "beforeContributingBalance": 0,
                             "afterContributingBalance": 2500 
                         },
                         {
@@ -231,7 +231,7 @@ module.exports = {
                             "accountTitle": "Easy Saver",
                             "contributingAmount": 0,
                             "totalAvailableBalance": 3500,
-                            "beforeContributingBalance": 3500,
+                            "beforeContributingBalance": 0,
                             "afterContributingBalance": 3500
                         }
                     ]
