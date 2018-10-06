@@ -35,9 +35,9 @@ module.exports = {
                     ]
                 },
                 {
-                    bankName: 'JP Morgan Chase',
+                    bankName: 'JPMC',
                     accountType: 'CC',
-                    accountTitle: 'Chase Freedom Unlimited Credit Card',
+                    accountTitle: 'Freedom Unlimited',
                     totalBalanceDue: 1800,
                     clearedTotalDue: true,
                     apr: 25.49,
@@ -56,7 +56,7 @@ module.exports = {
                 {
                     bankName: 'RBS',
                     accountType: 'CC',
-                    accountTitle: 'RBS Unlimited Credit Card',
+                    accountTitle: 'Unlimited Credit Card',
                     totalBalanceDue: 200,
                     clearedTotalDue: true,
                     apr: 19.94,
@@ -128,9 +128,9 @@ module.exports = {
                     ]
                 },
                 {
-                    bankName: 'JP Morgan Chase',
+                    bankName: 'JPMC',
                     accountType: 'CC',
-                    accountTitle: 'Chase Freedom Unlimited Credit Card',
+                    accountTitle: 'Freedom Unlimited',
                     totalBalanceDue: 2800,
                     clearedTotalDue: false,
                     apr: 25.49,
