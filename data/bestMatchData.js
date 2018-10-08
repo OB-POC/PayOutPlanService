@@ -4,42 +4,24 @@ module.exports = {
             username: 'alice',
             password: 'wonderland',
             UIN: 'UIN-xxxx',
-            totalAvailableBalance: 600,
+            totalAvailableBalance: '4,600',
             creditDebitMatch: [
                 {
-                    bankName: 'Monzo',
+                    bankName: 'Barclays',
                     accountType: 'M',
-                    accountTitle: 'Home Loan',
-                    totalBalanceDue: 6000,
+                    accountTitle: '2 Years Fixed Reward',
+                    totalBalanceDue: '2,000',
                     clearedTotalDue: true,
-                    interestRate: 2.9,
+                    interestRate: 3.3,
                     senders: [
-                        {
-                            "bankName": "Halifax",
-                            "accountType": "SB",
-                            "accountTitle": "Every Day Saver",
-                            "contributingAmount": 1000,
-                            "totalAvailableBalance": 1000,
-                            "beforeContributingBalance": 1000,
-                            "afterContributingBalance": 0
-                        },
-                        {
-                            "bankName": "Barclays",
-                            "accountType": "SB",
-                            "accountTitle": "Easy Saver",
-                            "contributingAmount": 5000,
-                            "totalAvailableBalance": 5000,
-                            "beforeContributingBalance": 5000,
-                            "afterContributingBalance": 0
-                        },
                         {
                             "bankName": "HSBC",
                             "accountType": "PCA",
                             "accountTitle": "HSBC Advance bank Account",
-                            "contributingAmount": 0,
-                            "totalAvailableBalance": 2600,
-                            "beforeContributingBalance": 600,
-                            "afterContributingBalance": 2600
+                            "contributingAmount": '2,000',
+                            "totalAvailableBalance": '2,600',
+                            "beforeContributingBalance": '2,600',
+                            "afterContributingBalance": '600'
                         }
                     ]
                 },
@@ -55,28 +37,28 @@ module.exports = {
                             "bankName": "HSBC",
                             "accountType": "PCA",
                             "accountTitle": "HSBC Advance bank Account",
-                            "contributingAmount": 1800,
-                            "totalAvailableBalance": 2600,
-                            "beforeContributingBalance": 2600,
-                            "afterContributingBalance": 800
+                            "contributingAmount": 600,
+                            "totalAvailableBalance": '2600',
+                            "beforeContributingBalance": 600,
+                            "afterContributingBalance": 0
                         },
                         {
                             "bankName": "Halifax",
                             "accountType": "SB",
                             "accountTitle": "Every Day Saver",
-                            "contributingAmount": 0,
-                            "totalAvailableBalance": 1000,
-                            "beforeContributingBalance": 0,
-                            "afterContributingBalance": 1000
+                            "contributingAmount": '1,000',
+                            "totalAvailableBalance": '1,000',
+                            "beforeContributingBalance": '1,000',
+                            "afterContributingBalance": 0
                         },
                         {
                             "bankName": "Barclays",
                             "accountType": "SB",
                             "accountTitle": "Easy Saver",
-                            "contributingAmount": 0,
-                            "totalAvailableBalance": 5000,
-                            "beforeContributingBalance": 0,
-                            "afterContributingBalance": 5000
+                            "contributingAmount": 200,
+                            "totalAvailableBalance": '5,000',
+                            "beforeContributingBalance": '5,000',
+                            "afterContributingBalance": '4,800'
                         }
                     ]
                 },
@@ -88,32 +70,14 @@ module.exports = {
                     clearedTotalDue: true,
                     apr: 19.94,
                     senders: [
-                        {   
-                            "bankName": "HSBC",
-                            "accountType": "PCA",
-                            "accountTitle": "HSBC Advance bank Account",
-                            "contributingAmount": 200,
-                            "totalAvailableBalance": 2600,
-                            "beforeContributingBalance": 800,
-                            "afterContributingBalance": 600  
-                        },
-                        {
-                            "bankName": "Halifax",
-                            "accountType": "SB",
-                            "accountTitle": "Every Day Saver",
-                            "contributingAmount": 0,
-                            "totalAvailableBalance": 1000,
-                            "beforeContributingBalance": 0,
-                            "afterContributingBalance": 1000
-                        },
                         {
                             "bankName": "Barclays",
                             "accountType": "SB",
                             "accountTitle": "Easy Saver",
-                            "contributingAmount": 0,
-                            "totalAvailableBalance": 5000,
-                            "beforeContributingBalance": 0,
-                            "afterContributingBalance": 5000
+                            "contributingAmount": 200,
+                            "totalAvailableBalance": '5,000',
+                            "beforeContributingBalance": '4,800',
+                            "afterContributingBalance": '4,600'
                         }
                     ] 
                 }
@@ -123,79 +87,52 @@ module.exports = {
             username: 'john',
             password: 'doe',
             UIN: 'UIN-xxxxx',
-            totalAvailableBalance: -1100,
+            totalAvailableBalance: '-1,600',
             creditDebitMatch: [
                 {
-                    bankName: 'Monzo',
+                    bankName: 'Barclays',
                     accountType: 'M',
-                    accountTitle: 'Home Loan',
-                    totalBalanceDue: 6000,
+                    accountTitle: '2 Years Fixed Reward',
+                    totalBalanceDue: '2,000',
                     clearedTotalDue: true,
-                    interestRate: 2.9,
+                    interestRate: 3.3,
                     senders: [
                         {
-                            "bankName": "Halifax",
-                            "accountType": "SB",
-                            "accountTitle": "Every Day Saver",
-                            "contributingAmount": 2500,
-                            "totalAvailableBalance": 2500,
-                            "beforeContributingBalance": 2500,
-                            "afterContributingBalance": 0 
-                        },
-                        {
-                            "bankName": "Barclays",
-                            "aaccountType": "SB",
-                            "accountTitle": "Easy Saver",
-                            "contributingAmount": 3500,
-                            "totalAvailableBalance": 3500,
-                            "beforeContributingBalance": 3500,
-                            "afterContributingBalance": 0
-                        },
-                        {
                             "bankName": "HSBC",
-                            "aaccountType": "PCA",
-                            "accountTitle": "HSBC Advance Bank Account",
-                            "contributingAmount": 0,
-                            "totalAvailableBalance": 2100,
-                            "beforeContributingBalance": 0,
-                            "afterContributingBalance": 2100
+                            "accountType": "PCA",
+                            "accountTitle": "HSBC Advance bank Account",
+                            "contributingAmount": '2,000',
+                            "totalAvailableBalance": '3,200',
+                            "beforeContributingBalance": '3,200',
+                            "afterContributingBalance": '1,200'
                         }
-                    ] 
+                    ]
                 },
                 {
                     bankName: 'BOS',
                     accountType: 'CC',
                     accountTitle: 'Classic Credit Card',
-                    totalBalanceDue: 400,
+                    totalBalanceDue: '2,000',
                     clearedTotalDue: true,
-                    apr: 27.90,
+                    apr: 27.10,
                     senders: [
                         {
                             "bankName": "HSBC",
                             "aaccountType": "PCA",
                             "accountTitle": "HSBC Advance Bank Account",
-                            "contributingAmount": 400,
-                            "totalAvailableBalance": 2100,
-                            "beforeContributingBalance": 2100,
-                            "afterContributingBalance": 1700
+                            "contributingAmount": '1,200',
+                            "totalAvailableBalance": '3,200',
+                            "beforeContributingBalance": '1,200',
+                            "afterContributingBalance": 0
                         },
                         {
                             "bankName": "Halifax",
                             "accountType": "SB",
                             "accountTitle": "Every Day Saver",
-                            "contributingAmount": 0,
-                            "totalAvailableBalance": 2500,
-                            "beforeContributingBalance": 0,
-                            "afterContributingBalance": 2500 
-                        },
-                        {
-                            "bankName": "Barclays",
-                            "aaccountType": "SB",
-                            "accountTitle": "Easy Saver",
-                            "contributingAmount": 0,
-                            "totalAvailableBalance": 3500,
-                            "beforeContributingBalance": 0,
-                            "afterContributingBalance": 2500
+                            "contributingAmount": 800,
+                            "totalAvailableBalance": '1,000',
+                            "beforeContributingBalance": '1,000',
+                            "afterContributingBalance": 200 
                         }
                     ]
                 },
@@ -208,31 +145,22 @@ module.exports = {
                     apr: 25.49,
                     senders: [
                         {
-                            "bankName": "HSBC",
-                            "aaccountType": "PCA",
-                            "accountTitle": "HSBC Advance Bank Account",
-                            "contributingAmount": 1700,
-                            "totalAvailableBalance": 2100,
-                            "beforeContributingBalance": 1700,
-                            "afterContributingBalance": 0   
-                        },
-                        {
                             "bankName": "Halifax",
                             "accountType": "SB",
                             "accountTitle": "Every Day Saver",
-                            "contributingAmount": 0,
-                            "totalAvailableBalance": 2500,
-                            "beforeContributingBalance": 0,
-                            "afterContributingBalance": 2500 
+                            "contributingAmount": 200,
+                            "totalAvailableBalance": '1,000',
+                            "beforeContributingBalance": 200,
+                            "afterContributingBalance": 0 
                         },
                         {
                             "bankName": "Barclays",
                             "aaccountType": "SB",
                             "accountTitle": "Easy Saver",
-                            "contributingAmount": 0,
-                            "totalAvailableBalance": 3500,
-                            "beforeContributingBalance": 0,
-                            "afterContributingBalance": 3500
+                            "contributingAmount": '1,100',
+                            "totalAvailableBalance": '1,100',
+                            "beforeContributingBalance": '1,100',
+                            "afterContributingBalance": 0
                         }
                     ]
                 }
