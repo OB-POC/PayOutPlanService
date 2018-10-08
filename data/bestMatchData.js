@@ -38,7 +38,7 @@ module.exports = {
                             "accountTitle": "HSBC Advance bank Account",
                             "contributingAmount": 0,
                             "totalAvailableBalance": 2600,
-                            "beforeContributingBalance": 0,
+                            "beforeContributingBalance": 600,
                             "afterContributingBalance": 2600
                         }
                     ]
