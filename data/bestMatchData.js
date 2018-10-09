@@ -13,6 +13,7 @@ module.exports = {
                     totalBalanceDue: '2,000',
                     clearedTotalDue: true,
                     interestRate: 3.3,
+                    totalOutstandingBalance: 0,
                     senders: [
                         {
                             "bankName": "HSBC",
@@ -21,7 +22,8 @@ module.exports = {
                             "contributingAmount": '2,000',
                             "totalAvailableBalance": '2,600',
                             "beforeContributingBalance": '2,600',
-                            "afterContributingBalance": '600'
+                            "afterContributingBalance": '600',
+                            "interestRate": 0.1
                         }
                     ]
                 },
@@ -29,9 +31,10 @@ module.exports = {
                     bankName: 'JPMC',
                     accountType: 'CC',
                     accountTitle: 'Freedom Unlimited',
-                    totalBalanceDue: 1800,
+                    totalBalanceDue: '1,800',
                     clearedTotalDue: true,
                     apr: 25.49,
+                    totalOutstandingBalance: 0,
                     senders: [
                         {
                             "bankName": "HSBC",
@@ -40,7 +43,8 @@ module.exports = {
                             "contributingAmount": 600,
                             "totalAvailableBalance": '2600',
                             "beforeContributingBalance": 600,
-                            "afterContributingBalance": 0
+                            "afterContributingBalance": 0,
+                            "interestRate": 0.1
                         },
                         {
                             "bankName": "Halifax",
@@ -49,7 +53,8 @@ module.exports = {
                             "contributingAmount": '1,000',
                             "totalAvailableBalance": '1,000',
                             "beforeContributingBalance": '1,000',
-                            "afterContributingBalance": 0
+                            "afterContributingBalance": 0,
+                            "interestRate": 0.2
                         },
                         {
                             "bankName": "Barclays",
@@ -58,7 +63,8 @@ module.exports = {
                             "contributingAmount": 200,
                             "totalAvailableBalance": '5,000',
                             "beforeContributingBalance": '5,000',
-                            "afterContributingBalance": '4,800'
+                            "afterContributingBalance": '4,800',
+                            "interestRate": 0.25
                         }
                     ]
                 },
@@ -69,6 +75,7 @@ module.exports = {
                     totalBalanceDue: 200,
                     clearedTotalDue: true,
                     apr: 19.94,
+                    totalOutstandingBalance: 0,
                     senders: [
                         {
                             "bankName": "Barclays",
@@ -77,7 +84,8 @@ module.exports = {
                             "contributingAmount": 200,
                             "totalAvailableBalance": '5,000',
                             "beforeContributingBalance": '4,800',
-                            "afterContributingBalance": '4,600'
+                            "afterContributingBalance": '4,600',
+                            "interestRate": 0.25
                         }
                     ] 
                 }
@@ -96,6 +104,7 @@ module.exports = {
                     totalBalanceDue: '2,000',
                     clearedTotalDue: true,
                     interestRate: 3.3,
+                    totalOutstandingBalance: 0,
                     senders: [
                         {
                             "bankName": "HSBC",
@@ -104,7 +113,8 @@ module.exports = {
                             "contributingAmount": '2,000',
                             "totalAvailableBalance": '3,200',
                             "beforeContributingBalance": '3,200',
-                            "afterContributingBalance": '1,200'
+                            "afterContributingBalance": '1,200',
+                            "interestRate": 0.1
                         }
                     ]
                 },
@@ -115,6 +125,7 @@ module.exports = {
                     totalBalanceDue: '2,000',
                     clearedTotalDue: true,
                     apr: 27.10,
+                    totalOutstandingBalance: 0,
                     senders: [
                         {
                             "bankName": "HSBC",
@@ -123,7 +134,8 @@ module.exports = {
                             "contributingAmount": '1,200',
                             "totalAvailableBalance": '3,200',
                             "beforeContributingBalance": '1,200',
-                            "afterContributingBalance": 0
+                            "afterContributingBalance": 0,
+                            "interestRate": 0.1
                         },
                         {
                             "bankName": "Halifax",
@@ -132,7 +144,8 @@ module.exports = {
                             "contributingAmount": 800,
                             "totalAvailableBalance": '1,000',
                             "beforeContributingBalance": '1,000',
-                            "afterContributingBalance": 200 
+                            "afterContributingBalance": 200,
+                            "interestRate": 0.2 
                         }
                     ]
                 },
@@ -140,9 +153,10 @@ module.exports = {
                     bankName: 'JPMC',
                     accountType: 'CC',
                     accountTitle: 'Freedom Unlimited',
-                    totalBalanceDue: 2800,
+                    totalBalanceDue: '2,800',
                     clearedTotalDue: false,
                     apr: 25.49,
+                    totalOutstandingBalance: '1,500',
                     senders: [
                         {
                             "bankName": "Halifax",
@@ -151,7 +165,8 @@ module.exports = {
                             "contributingAmount": 200,
                             "totalAvailableBalance": '1,000',
                             "beforeContributingBalance": 200,
-                            "afterContributingBalance": 0 
+                            "afterContributingBalance": 0,
+                            "interestRate": 0.2 
                         },
                         {
                             "bankName": "Barclays",
@@ -160,7 +175,8 @@ module.exports = {
                             "contributingAmount": '1,100',
                             "totalAvailableBalance": '1,100',
                             "beforeContributingBalance": '1,100',
-                            "afterContributingBalance": 0
+                            "afterContributingBalance": 0,
+                            "interestRate": 0.25
                         }
                     ]
                 }
