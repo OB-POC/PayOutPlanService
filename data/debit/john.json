@@ -1,0 +1,56 @@
+{
+    "username": "john",
+    "password": "doe",
+    "UIN": "UIN-xxxxx",
+    "creditScore": 650,
+    "banks": [
+        {
+            "bankName": "Halifax",
+            "bankId": "HHaalliiffaaxx",
+            "accounts": [
+                {
+                    "accountType": "SB",
+                    "accountNumber": "XXXXXX XXXX6789",
+                    "accountTitle": "Every Day Saver",
+                    "standingInst": 100,
+                    "balance": 2100,
+                    "minBalance": 100,
+                    "interestRate": 0.2,
+                    "availableBalance": 1900
+                }
+            ]
+        },
+        {
+            "bankName": "HSBC",
+            "bankId": "HHSSBBCC",
+            "accounts": [
+                {
+                    "aaccountType": "PCA",
+                    "accountNumber": "XXXXXX XXXX2345",
+                    "accountTitle": "HSBC Advance Bank Account",
+                    "standingInst": 1100,
+                    "balance": 4000,
+                    "minBalance": 200,
+                    "interestRate": 0.1,
+                    "availableBalance": 2700
+                }
+            ]
+        },
+        {
+            "bankName": "Barclays",
+            "bankId": "BBaarrccllaayyss",
+            "accounts": [
+                {
+                    "accountType": "SB",
+                    "accountNumber": "XXXXXX XXXX3456",
+                    "accountTitle": "Easy Saver",
+                    "standingInst": 1100,
+                    "balance": 1500,
+                    "minBalance": 200,
+                    "interestRate": 0.25,
+                    "availableBalance":200
+                }
+            ]
+        }
+    ]
+}

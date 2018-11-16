@@ -1,0 +1,58 @@
+{
+    "username": "john",
+    "password": "doe",
+    "UIN": "UIN-xxxxx",
+    "creditScore": 650,
+    "banks": [
+        {
+            "bankName": "NatWest",
+            "bankId": "NNaattWWeesstt",
+            "accounts": [
+                {
+                    "accountType": "CC",
+                    "accountNumber": "XXXXXX XXXXXX6789",
+                    "accountTitle": "Reward Black Credit Card",
+                    "creditLimit": 3000,
+                    "availableCredit": 100,
+                    "totalBalanceDue": 2900,
+                    "minBalanceDue": 50,
+                    "apr": 23.7,
+                    "dueDate": 1541534750267
+                }
+            ]
+        },
+        {
+            "bankName": "RBS",
+            "bankId": "RRBBSS",
+            "accounts": [
+                {
+                    "accountType": "CC",
+                    "accountNumber": "XXXXXX XXXXXX7891",
+                    "accountTitle": "Classic Credit Card",
+                    "creditLimit": 4000,
+                    "availableCredit": 2000,
+                    "totalBalanceDue": 2000,
+                    "minBalanceDue": 100,
+                    "apr": 27.1,
+                    "dueDate": 1541534750267
+                }
+            ]
+        },
+        {
+            "bankName": "Barclays",
+            "bankId": "BBaarrccllaayyss",
+            "accounts": [
+                {
+                    "accountType": "M",
+                    "accountNumber": "XXXXXX XXXXXX7890",
+                    "accountTitle": "2 Years Fixed Reward",
+                    "minMonthlyPayment": 800,
+                    "remainingFullTerm": "5Y 3M",
+                    "totalBalanceDue": 800,
+                    "interestRate": 3.3,
+                    "dueDate": 1541534750267
+                }
+            ]
+        }
+    ]
+}
