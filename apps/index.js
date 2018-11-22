@@ -1,10 +1,10 @@
-import { getSimpleInterest, getCompundInterest } from '../lib';
+var { getSimpleInterest, getCompundInterest } = require('../lib');
 
 // Calculate SI for all debit accounts
 let calcSIForDebit = (banks) => {
     let totalSI = banks.reduce((si, bank) => {
         let { accounts } = bank;
-        return si + getSimpleInterest(accounts[0].availableBalance, accounts[0].interestRate)
+        return si + getSimpleInterest(accounts[0].balance, accounts[0].interestRate)
     }, 0)
 
     return totalSI;

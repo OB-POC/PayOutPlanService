@@ -1,5 +1,6 @@
 var fs = require("fs");
 var path = require("path");
+var {calcDiff} = require("./index");
 const {
     readFileData,
     getTotalBalanceDebit,
@@ -12,7 +13,9 @@ const {
     selectCreditCards,
     findBestMatch,
     calculateBestMatch,
-    dataEnricher
+    dataEnricher,
+    sortCreditAccAsc,
+    sortDebitAccDesc
 } = require("../lib/bestPlanHelper");
 
 function bestMatchCalculation(userName){
@@ -27,7 +30,8 @@ function bestMatchCalculation(userName){
                 jsCredit = creditData;
                 readFileData(debitFilePath).then(debitData => {
                     jsDebit = debitData;
-                
+                    var savings = savingCalculation(jsDebit,jsCredit);
+                    console.log("savings",savings);
                     let {totalAvailableBalance} = getTotalBalanceDebit(jsDebit);
                     let {totalCreditDue,totalMinDue} = getTotalBalanceCredit(jsCredit);
                     let sortedDebitAccs = sortDebitAcc(jsDebit);
@@ -42,6 +46,8 @@ function bestMatchCalculation(userName){
                         let creditAccounts = selectAllCreditCard(creditAccs);
                         let {bestPlan} = calculateBestMatch(debitAccounts,creditAccounts);
                         let responseObj = dataEnricher(bestPlan,jsCredit,jsDebit);
+                        responseObj["optimizeSaving"] = savings;
+                        console.log(savings);
                         resolve(responseObj);
                     }
                     else{
@@ -49,6 +55,8 @@ function bestMatchCalculation(userName){
                         let debitAccounts = selectAllDebitCards(debitAccs);
                         let {bestPlan} = calculateBestMatch(debitAccounts,creditAccounts);
                         let responseObj = dataEnricher(bestPlan,jsCredit,jsDebit);
+                        responseObj["optimizeSaving"] = savings;
+                        console.log(savings);
                         resolve(responseObj);
                     }
                 
@@ -63,6 +71,61 @@ function bestMatchCalculation(userName){
     })
     return bestMatchCalculation;
 }
+
+let savingCalculation = (jsDebit,jsCredit) => {
+    let debitAccs = JSON.parse(JSON.stringify(jsDebit));
+    let creditAccs = JSON.parse(JSON.stringify(jsCredit));
+
+    let {totalAvailableBalance} = getTotalBalanceDebit(debitAccs);
+    let {totalCreditDue,totalMinDue} = getTotalBalanceCredit(creditAccs);
+    let sortedDebitAccs = sortDebitAcc(debitAccs);
+    let sortedCreditAccs = sortCreditAcc(creditAccs);
+    //console.log(totalAvailableBalance,totalCreditDue,totalMinDue,sortedDebitAccs.banks,sortedCreditAccs.banks);
+    let bestPlanSaving = differenceCalc(totalAvailableBalance,totalCreditDue,totalMinDue,sortedDebitAccs.banks,sortedCreditAccs.banks);
+
+    let revsortedDebitAccs = sortDebitAccDesc(jsDebit);
+    let revsortedCreditAccs = sortCreditAccAsc(jsCredit);
+    let worstPlanSaving = differenceCalc(totalAvailableBalance,totalCreditDue,totalMinDue,revsortedDebitAccs.banks,revsortedCreditAccs.banks);
+
+    return Math.abs(bestPlanSaving - worstPlanSaving);
+}
+
+let differenceCalc = (totalAvailableBalance,totalCreditDue,totalMinDue,debitAccs,creditAccs) => {
+    if(totalCreditDue <= totalAvailableBalance)
+    {
+        let debitAccounts = selectDebitCards(debitAccs, totalCreditDue);
+        let creditAccounts = selectAllCreditCard(creditAccs);
+        debitAccounts.map((debitBank) => {
+            debitBank.accounts[0].balance = debitBank.accounts[0].balance - debitBank.accounts[0].usableAmount;
+        })
+
+        //console.log(creditAccounts);
+
+        creditAccounts.map((creditBank) =>{
+            creditBank.accounts[0].totalBalanceDue = creditBank.accounts[0].totalBalanceDue - creditBank.accounts[0].clearableAmount;
+        })
+        return calcDiff(debitAccounts,creditAccounts);
+    }
+    else{
+        let creditAccounts = selectCreditCards(creditAccs, totalAvailableBalance,totalMinDue);
+        let debitAccounts = selectAllDebitCards(debitAccs);
+
+        //console.log(creditAccounts);
+
+        debitAccounts.map((debitBank) => {
+            debitBank.accounts[0].balance = debitBank.accounts[0].balance - debitBank.accounts[0].usableAmount;
+        })
+
+        creditAccounts.map((creditBank) =>{
+            creditBank.accounts[0].totalBalanceDue = creditBank.accounts[0].totalBalanceDue - creditBank.accounts[0].clearableAmount;
+        })
+
+        return calcDiff(debitAccounts,creditAccounts);
+    }
+}
+
+
+
 
 module.exports = bestMatchCalculation;
 
