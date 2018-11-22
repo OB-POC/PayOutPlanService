@@ -30,7 +30,6 @@ function bestMatchCalculation(userName){
                 jsCredit = creditData;
                 readFileData(debitFilePath).then(debitData => {
                     jsDebit = debitData;
-                    var savings = savingCalculation(jsDebit,jsCredit);
                     console.log("savings",savings);
                     let {totalAvailableBalance} = getTotalBalanceDebit(jsDebit);
                     let {totalCreditDue,totalMinDue} = getTotalBalanceCredit(jsCredit);
@@ -44,8 +43,9 @@ function bestMatchCalculation(userName){
                     {
                         let debitAccounts = selectDebitCards(debitAccs, totalCreditDue);
                         let creditAccounts = selectAllCreditCard(creditAccs);
-                        let {bestPlan} = calculateBestMatch(debitAccounts,creditAccounts);
+                        let {bestPlan} = findBestMatch(debitAccounts,creditAccounts);
                         let responseObj = dataEnricher(bestPlan,jsCredit,jsDebit);
+                        var savings = savingCalculation(jsDebit,jsCredit);
                         responseObj["optimizeSaving"] = savings;
                         console.log(savings);
                         resolve(responseObj);
@@ -53,8 +53,9 @@ function bestMatchCalculation(userName){
                     else{
                         let creditAccounts = selectCreditCards(creditAccs, totalAvailableBalance,totalMinDue);
                         let debitAccounts = selectAllDebitCards(debitAccs);
-                        let {bestPlan} = calculateBestMatch(debitAccounts,creditAccounts);
+                        let {bestPlan} = findBestMatch(debitAccounts,creditAccounts);
                         let responseObj = dataEnricher(bestPlan,jsCredit,jsDebit);
+                        var savings = savingCalculation(jsDebit,jsCredit);
                         responseObj["optimizeSaving"] = savings;
                         console.log(savings);
                         resolve(responseObj);
@@ -124,9 +125,4 @@ let differenceCalc = (totalAvailableBalance,totalCreditDue,totalMinDue,debitAccs
     }
 }
 
-
-
-
 module.exports = bestMatchCalculation;
-
-
