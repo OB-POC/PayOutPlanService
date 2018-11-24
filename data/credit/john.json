@@ -49,7 +49,7 @@
                     "minMonthlyPayment": 800,
                     "remainingFullTerm": "5Y 3M",
                     "totalBalanceDue": 800,
-                    "interestRate": 3.3,
+                    "apr": 3.3,
                     "dueDate": 1541534750267
                 }
             ]
