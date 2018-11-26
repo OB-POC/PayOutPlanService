@@ -11,35 +11,35 @@ const bestMatchCalculation = require('../apps/bestCalc');
 
 describe('Payout Plan', function () {
 
-  // describe('Alice calculateBestMatch', function () {
-  //   xit('Calling the alice calculateBestMatch - positive', function (done) {
-  //     container
-  //       .get('/payOutPlanService/calculateBestMatch')
-  //       .set("x-access-token", alice_token)
-  //       .expect(200, done)
-  //   });
-  //   it('Calling the alice calculateBestMatch with wrong token- negative', function (done) {
-  //     container
-  //       .get('/payOutPlanService/calculateBestMatch')
-  //       .set("x-access-token", "wrong token")
-  //       .expect(500, done)
-  //   });
-  // })
+  describe('Alice calculateBestMatch', function () {
+    xit('Calling the alice calculateBestMatch - positive', function (done) {
+      container
+        .get('/payOutPlanService/calculateBestMatch')
+        .set("x-access-token", alice_token)
+        .expect(200, done)
+    });
+    it('Calling the alice calculateBestMatch with wrong token- negative', function (done) {
+      container
+        .get('/payOutPlanService/calculateBestMatch')
+        .set("x-access-token", "wrong token")
+        .expect(500, done)
+    });
+  })
 
-  // describe('john calculateBestMatch', function () {
-  //   xit('Calling the john calculateBestMatch - positive', function (done) {
-  //     container
-  //       .get('/payOutPlanService/calculateBestMatch')
-  //       .set("x-access-token", john_token)
-  //       .expect(200, done)
-  //   });
-  //   it('Calling the alice calculateBestMatch with wrong token- negative', function (done) {
-  //     container
-  //       .get('/payOutPlanService/calculateBestMatch')
-  //       .set("x-access-token", "wrong token")
-  //       .expect(500, done)
-  //   });
-  // })
+  describe('john calculateBestMatch', function () {
+    xit('Calling the john calculateBestMatch - positive', function (done) {
+      container
+        .get('/payOutPlanService/calculateBestMatch')
+        .set("x-access-token", john_token)
+        .expect(200, done)
+    });
+    it('Calling the alice calculateBestMatch with wrong token- negative', function (done) {
+      container
+        .get('/payOutPlanService/calculateBestMatch')
+        .set("x-access-token", "wrong token")
+        .expect(500, done)
+    });
+  })
 
   describe('Analysis of Savings', () => {
     it('Calculate the savings for Alice', (done) => {
