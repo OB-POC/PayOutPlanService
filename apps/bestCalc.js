@@ -1,7 +1,9 @@
 var fs = require("fs");
 var path = require("path");
 var {calcDiff} = require("./index");
+var { secret, serviceUrls } = require('./../config/index')
 const {
+    getJsonData,
     readFileData,
     getTotalBalanceDebit,
     getTotalBalanceCredit,
@@ -23,12 +25,13 @@ function bestMatchCalculation(userName){
         try{
             let jsCredit;
             let jsDebit;
-            let creditFilePath = path.join(__dirname,`./../data/credit/${userName}.json`);
-            let debitFilePath = path.join(__dirname,`./../data/debit/${userName}.json`);
+            let creditFileURL = `${serviceUrls.dbUrl}/${userName}-credit`;
+            let debitFileURL = `${serviceUrls.dbUrl}/${userName}-debit`;
 
-            readFileData(creditFilePath).then(creditData =>{ 
+            getJsonData(creditFileURL).then(creditData =>{ 
                 jsCredit = creditData;
-                readFileData(debitFilePath).then(debitData => {
+                console.log(jsCredit);
+                getJsonData(debitFileURL).then(debitData => {
                     jsDebit = debitData;
                     let {totalAvailableBalance} = getTotalBalanceDebit(jsDebit);
                     let {totalCreditDue,totalMinDue} = getTotalBalanceCredit(jsCredit);
