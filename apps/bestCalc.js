@@ -30,7 +30,6 @@ function bestMatchCalculation(userName){
                 jsCredit = creditData;
                 readFileData(debitFilePath).then(debitData => {
                     jsDebit = debitData;
-                    console.log("savings",savings);
                     let {totalAvailableBalance} = getTotalBalanceDebit(jsDebit);
                     let {totalCreditDue,totalMinDue} = getTotalBalanceCredit(jsCredit);
                     let sortedDebitAccs = sortDebitAcc(jsDebit);
@@ -47,7 +46,7 @@ function bestMatchCalculation(userName){
                         let responseObj = dataEnricher(bestPlan,jsCredit,jsDebit);
                         var savings = savingCalculation(jsDebit,jsCredit);
                         responseObj["optimizeSaving"] = savings;
-                        console.log(savings);
+                        // console.log(savings);
                         resolve(responseObj);
                     }
                     else{
@@ -57,7 +56,7 @@ function bestMatchCalculation(userName){
                         let responseObj = dataEnricher(bestPlan,jsCredit,jsDebit);
                         var savings = savingCalculation(jsDebit,jsCredit);
                         responseObj["optimizeSaving"] = savings;
-                        console.log(savings);
+                        // console.log(savings);
                         resolve(responseObj);
                     }
                 
