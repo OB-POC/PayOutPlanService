@@ -30,7 +30,7 @@ function bestMatchCalculation(userName){
 
             getJsonData(creditFileURL).then(creditData =>{ 
                 jsCredit = creditData;
-                console.log(jsCredit);
+                // console.log(jsCredit);
                 getJsonData(debitFileURL).then(debitData => {
                     jsDebit = debitData;
                     let {totalAvailableBalance} = getTotalBalanceDebit(jsDebit);
@@ -89,7 +89,7 @@ let savingCalculation = (jsDebit,jsCredit) => {
     let revsortedDebitAccs = sortDebitAccDesc(jsDebit);
     let revsortedCreditAccs = sortCreditAccAsc(jsCredit);
     let worstPlanSaving = differenceCalc(totalAvailableBalance,totalCreditDue,totalMinDue,revsortedDebitAccs.banks,revsortedCreditAccs.banks);
-
+    
     return Math.abs(bestPlanSaving - worstPlanSaving);
 }
 
