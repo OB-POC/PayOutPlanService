@@ -31,7 +31,7 @@ function bestMatchCalculation(userName){
 
             getJsonData(creditFileURL).then(creditData =>{ 
                 jsCredit = creditData;
-                //console.log("credit",jsCredit);
+                // console.log(jsCredit);
                 getJsonData(debitFileURL).then(debitData => {
                     jsDebit = debitData;
                     //console.log("debit",jsDebit);
@@ -52,7 +52,7 @@ function bestMatchCalculation(userName){
                         let responseObj = dataEnricher(bestPlan,jsCredit,jsDebit);
                         var savings = savingCalculation(jsDebit,jsCredit);
                         responseObj["optimizeSaving"] = savings;
-                        console.log(savings);
+                        // console.log(savings);
                         resolve(responseObj);
                     }
                     else{
@@ -62,7 +62,7 @@ function bestMatchCalculation(userName){
                         let responseObj = dataEnricher(bestPlan,jsCredit,jsDebit);
                         var savings = savingCalculation(jsDebit,jsCredit);
                         responseObj["optimizeSaving"] = savings;
-                        console.log(savings);
+                        // console.log(savings);
                         resolve(responseObj);
                     }
                 
@@ -92,7 +92,7 @@ let savingCalculation = (jsDebit,jsCredit) => {
     let revsortedDebitAccs = sortDebitAccDesc(jsDebit);
     let revsortedCreditAccs = sortCreditAccAsc(jsCredit);
     let worstPlanSaving = differenceCalc(totalAvailableBalance,totalCreditDue,totalMinDue,revsortedDebitAccs.banks,revsortedCreditAccs.banks);
-
+    
     return Math.abs(bestPlanSaving - worstPlanSaving);
 }
 
