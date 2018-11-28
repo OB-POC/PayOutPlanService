@@ -14,7 +14,7 @@ let calcSIForDebit = (banks) => {
 let calcCIForCredit = (banks) => {
     let totalCI = banks.reduce((ci, bank) => {
         let { accounts } = bank;
-        return ci + getCompundInterest(accounts[0].totalBalanceDue, accounts[0].apr)
+        return ci + getCompundInterest((accounts[0].accountType == "M")?accounts[0].minMonthlyPayment:accounts[0].totalBalanceDue, accounts[0].apr)
     }, 0)
 
     return totalCI;

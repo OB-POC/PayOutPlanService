@@ -3,6 +3,7 @@ var path = require("path");
 var {calcDiff} = require("./index");
 var { secret, serviceUrls } = require('./../config/index')
 const {
+    filterData,
     getJsonData,
     readFileData,
     getTotalBalanceDebit,
@@ -30,9 +31,11 @@ function bestMatchCalculation(userName){
 
             getJsonData(creditFileURL).then(creditData =>{ 
                 jsCredit = creditData;
-                console.log(jsCredit);
+                //console.log("credit",jsCredit);
                 getJsonData(debitFileURL).then(debitData => {
                     jsDebit = debitData;
+                    //console.log("debit",jsDebit);
+                    filterData(jsCredit,jsDebit);
                     let {totalAvailableBalance} = getTotalBalanceDebit(jsDebit);
                     let {totalCreditDue,totalMinDue} = getTotalBalanceCredit(jsCredit);
                     let sortedDebitAccs = sortDebitAcc(jsDebit);
@@ -105,7 +108,13 @@ let differenceCalc = (totalAvailableBalance,totalCreditDue,totalMinDue,debitAccs
         //console.log(creditAccounts);
 
         creditAccounts.map((creditBank) =>{
-            creditBank.accounts[0].totalBalanceDue = creditBank.accounts[0].totalBalanceDue - creditBank.accounts[0].clearableAmount;
+            if(!creditBank.accounts[0].accountType.localeCompare("M"))
+            {
+                creditBank.accounts[0].minMonthlyPayment = creditBank.accounts[0].minMonthlyPayment - creditBank.accounts[0].clearableAmount;
+            }
+            else{
+                creditBank.accounts[0].totalBalanceDue = creditBank.accounts[0].totalBalanceDue - creditBank.accounts[0].clearableAmount;
+            }
         })
         return calcDiff(debitAccounts,creditAccounts);
     }
@@ -120,7 +129,13 @@ let differenceCalc = (totalAvailableBalance,totalCreditDue,totalMinDue,debitAccs
         })
 
         creditAccounts.map((creditBank) =>{
-            creditBank.accounts[0].totalBalanceDue = creditBank.accounts[0].totalBalanceDue - creditBank.accounts[0].clearableAmount;
+            if(!creditBank.accounts[0].accountType.localeCompare("M"))
+            {
+                creditBank.accounts[0].minMonthlyPayment = creditBank.accounts[0].minMonthlyPayment - creditBank.accounts[0].clearableAmount;
+            }
+            else{ 
+                creditBank.accounts[0].totalBalanceDue = creditBank.accounts[0].totalBalanceDue - creditBank.accounts[0].clearableAmount;
+            }
         })
 
         return calcDiff(debitAccounts,creditAccounts);
