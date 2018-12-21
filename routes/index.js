@@ -22,14 +22,15 @@ router.get('/makePayment', function(req, res, next) {
   jwt.verify(token, config.secret, function(err, decodedObj){
     if (err) return res.status(500).send({ auth: false, message: 'Failed to authenticate token.' });
     var userName = decodedObj.username;
-    var userObj = bestMatchData.userData.filter((item)=>{
-      return item.username == userName
-    })[0];
-    if(userObj){
+    // var userObj = bestMatchData.userData.filter((item)=>{
+    //   return item.username == userName
+    // })[0];
+    //if(userObj){
       res.status(200).json({
-        totalAvailableBalance: userObj.totalAvailableBalance 
+        //totalAvailableBalance: userObj.totalAvailableBalance 
+        "msg" : "deprecated"
       });
-    }
+    //}
   })
 })
 
